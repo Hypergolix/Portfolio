@@ -1,0 +1,63 @@
+// Change DOC name
+@mixin setDefaults($x, $y) {
+    transform-origin: $x $y;
+    transform: rotate(0deg);
+    transition-duration: 0.25s;
+}
+
+@mixin BtnAnimate($PosOrNeg) {
+    @if $PosOrNeg=="pos" {
+        // If positive
+        transform: rotate(45deg); // In positive degrees
+    }
+    @if $PosOrNeg=="neg" {
+        // If negative
+        transform: rotate(-45deg); // In negative degrees
+    }
+    transition-duration: 0.25s; // Duration of transition 
+}
+
+#menu_icon1 span:nth-child(1) {
+    @include setDefaults(3.5px, 14.5px);
+    left: 11px;
+    top: 0px;
+}
+
+#menu_icon1 span:nth-child(2) {
+    @include setDefaults(3.5px, 14.5px);
+    left: 11px;
+    top: 0px;
+}
+
+#menu_icon1 span:nth-child(3) {
+    left: 11px;
+    top: 11px;
+}
+
+#menu_icon1 span:nth-child(4) {
+    @include setDefaults(3.5px, -7.5px);
+    left: 11px;
+    top: 22px;
+}
+
+#menu_icon1 span:nth-child(5) {
+    @include setDefaults(3.5px, -7.5px);
+    left: 11px;
+    top: 22px;
+}
+
+#menu_icon1.open span:nth-child(1) {
+    @include BtnAnimate("pos");
+}
+
+#menu_icon1.open span:nth-child(2) {
+    @include BtnAnimate("neg");
+}
+
+#menu_icon1.open span:nth-child(4) {
+    @include BtnAnimate("pos");
+}
+
+#menu_icon1.open span:nth-child(5) {
+    @include BtnAnimate("neg");
+}
