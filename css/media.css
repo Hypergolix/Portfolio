@@ -1,0 +1,42 @@
+@media only screen and (max-width: 900px) {
+  .navLinks li a {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
+  }
+  #menu_icon1 {
+    transform: scale(0.6) rotate(90deg);
+    /*Doesn't keep its rotation*/
+  }
+
+  .mainTitle__top h1 {
+    font-size: 28px;
+    line-height: 50px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mainTitle__top h1 {
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+  }
+  .mainTitle__top {
+    min-width: 450px;
+    align-self: unset;
+  }
+  .mainTitle__top img {
+    max-height: 80%;
+    display: none;
+  }
+  #menu_icon1 {
+    transform: scale(0.5) rotate(90deg);
+    /*Doesn't keep its rotation*/
+  }
+  main {
+    margin: 40px 0px 0px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+}
