@@ -6,15 +6,20 @@ var classState = false;
 
 var menu = document.getElementById('main01');
 
-$(document).ready(function() {
-    $('#menu_icon1').click(function() {
+$(document).ready(function () {
+    $('#menu_icon1').click(function () {
         $(this).toggleClass('open');
         var element = document.getElementById("animateNav");
+        var element2 = document.getElementById("animateTxt");
         element.classList.toggle("animation");
+        element2.classList.toggle("animate__fadeOut");
+        document.getElementById("animateTxt").style.visibility = "visible"; // Not the best implementation - shouldn't cause perf issues
         classState = !classState;
         console.log(classState);
     });
 });
+
+
 
 // mainElement stores id of main which is main01
 // var mainElement = document.getElementById('main01');
@@ -36,11 +41,6 @@ window.onclick = function(event) {
 }
 
 */
-
-
-
-
-
 
 /*
 window.onclick = function(event) {

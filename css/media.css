@@ -1,3 +1,10 @@
+@media only screen and (max-width: 1300px) {
+  h1 {
+    font-size: 28px;
+    line-height: 50px;
+  }
+}
+
 @media only screen and (max-width: 900px) {
   .navLinks li a {
     font-size: 16px;
@@ -9,17 +16,21 @@
     /*Doesn't keep its rotation*/
   }
 
-  .mainTitle__top h1 {
-    font-size: 28px;
+  h1 {
+    font-size: 26px;
     line-height: 50px;
+  }
+  .project_item {
+    flex: 0 0 47%;
+    height: 52vw;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .mainTitle__top h1 {
-    font-size: 24px;
-    line-height: 36px;
-    text-align: center;
+  h1 {
+    font-size: 18px;
+    line-height: 30px;
+    /*text-align: center;*/
   }
   .mainTitle__top {
     min-width: 450px;
@@ -35,6 +46,14 @@
   }
   main {
     margin: 40px 0px 0px;
+  }
+  .project_item {
+    flex: 1 0 51%;
+    height: 98vw;
+    margin: 0px 40px 20px;
+  }
+  .animation {
+    height: 30vh;
   }
 }
 
