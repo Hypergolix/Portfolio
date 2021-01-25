@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/scrollbar.css">
     <script src="https://kit.fontawesome.com/5558145c29.js" crossorigin="anonymous"></script>
     <script src="js/script.js" defer></script>
+    <script src="open_page.js" defer></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <title>Home - Leon Jardevall</title>
 </head>
@@ -62,7 +63,8 @@
         <div class="mainContent__mid">
             <!--Banner or 2x length squares, links to iframe page-->
             <!--Needs to send which item it should open in iframe-->
-            <a target="_blank" rel="noopener noreferrer" href="project_viewer.html" id="item1" class="project_item">
+            <!--Doing it like this for now, linking separate documents, will use one document to view many projects in future-->
+            <a target="_blank" rel="noopener noreferrer" href="Genesis_viewer.html" id="item1" class="project_item">
                 <div class="aboutTxt">
                     <h1>Genesis</h1>
                     <p>This project demonstrates a fully responsive three page website using Flexbox.
@@ -74,22 +76,32 @@
                     </p>
                 </div>
             </a>
-            <a target="_blank" rel="noopener noreferrer" href="project_viewer.html" id="item2" class="project_item">
+            <a target="_blank" rel="noopener noreferrer" href="Animation_viewer.html" id="item2" class="project_item">
                 <div class="aboutTxt">
                     <h1>Animation</h1>
-                    <p></p>
+                    <p>The goal here was to practise creating animations</p>
+                    <br>
+                    <p>It demonstrates three different types: keyframe, transitions, and one from Animate.css with some
+                        light JavaScript to tie it all together.
+                    </p>
+                    <br>
+                    <p> I also added a log-in modal form from another project which features all the front-end checks a
+                        form should have. </p>
                 </div>
             </a>
-            <a target="_blank" rel="noopener noreferrer" href="project_viewer.html" id="item3" class="project_item">
+            <a target="_blank" rel="noopener noreferrer" href="Responsive_viewer.html" id="item3" class="project_item">
                 <div class="aboutTxt">
                     <h1>Responsive</h1>
-                    <p></p>
+                    <p>A fully responsive webpage down to the smallest size</p>
+                    <br>
+                    <p>Here I demonstrate the use of media queries and flexbox to create a fully responsive site all the
+                        way down to 320px</p>
                 </div>
             </a>
             <a target="_blank" rel="noopener noreferrer" href="project_viewer.html" id="item4" class="project_item">
                 <div class="aboutTxt">
                     <h1>Weather</h1>
-                    <p></p>
+                    <p>Coming soon...</p>
                 </div>
             </a>
         </div>

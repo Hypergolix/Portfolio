@@ -105,6 +105,7 @@ header {
 /*Instead of 1, use current page - sass or js?*/
 .navigation li:nth-child(1) {
   /*inicates selected page*/
+  /*If others are hovered over - remove effects for this one*/
   text-decoration: underline overline;
 }
 /*^HERE^*/
@@ -173,8 +174,15 @@ header {
   justify-content: space-evenly;
 }
 
-.navLinks li a:hover {
+/*temporarily unavailable*/
+/*also this is kind of backwards*/
+.navLinks li:hover:not(:nth-child(3), :nth-child(4), :nth-child(5)) {
   text-decoration: underline overline;
+}
+.navLinks li:nth-child(3),
+.navLinks li:nth-child(4),
+.navLinks li:nth-child(5) {
+  text-decoration: line-through;
 }
 
 .navLinks li a {
@@ -244,8 +252,39 @@ main {
   background-image: url("/css/thumbnails/Genesis_thumb.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
+
   /*background-position: 0px;*/
   /*FIX IMAGE, GREY BORDER*/
+}
+#item1 h1,
+#item1 p {
+  color: #333;
+}
+#item2 {
+  background-image: url("/css/thumbnails/Animation_thumb.png");
+  /*Use scss to avoid repetition*/
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+#item2 h1 {
+  color: #6e6e6e;
+}
+#item2 p {
+  color: #111;
+}
+#item3 {
+  background-image: url("/css/thumbnails/Responsive_thumb.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+#item3 h1,
+#item3 p {
+  color: #fff;
+}
+
+#item4 {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 .project_item:hover > .aboutTxt {
@@ -253,6 +292,9 @@ main {
 }
 
 .aboutTxt:hover {
+  /*This isn't great as it causes a delay*/
+  /*Can also be bugged where the text shows without blurring*/
+  /*Theres a 1px border that can be hovered over to show the text and avoid blur*/
   backdrop-filter: blur(2px);
 }
 
@@ -271,11 +313,6 @@ main {
   padding-right: 20px;
 }
 
-.aboutTxt h1,
-.aboutTxt p {
-  color: #333;
-  /*margin-top: 8px;*/
-}
 .aboutTxt h1 {
   margin-top: 8px;
   text-decoration: underline;

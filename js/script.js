@@ -19,7 +19,26 @@ $(document).ready(function () {
     });
 });
 
-
+var pageName = "";
+function loadPage(pageNr) {
+    console.log(pageName);
+    switch (pageNr) {
+        case 0:
+            pageName = "Genesis";
+            break;
+        case 1:
+            pageName = "Animation";
+            break;
+        case 2:
+            pageName = "Responsive Nav";
+            break;
+        default:
+            break;
+    }
+    console.log(pageName);
+    console.log(`Project_pages/${pageName}/index.html`);
+    // document.getElementById("projectWindow").src = `Project_pages/${pageName}/index.html`;
+}
 
 // mainElement stores id of main which is main01
 // var mainElement = document.getElementById('main01');
